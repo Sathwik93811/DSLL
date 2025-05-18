@@ -1,0 +1,245 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE>Matrimonial Info</TITLE>
+<link rel="stylesheet" type="text/css" media="all" href="../css/jsDatePick_ltr.min.css" />
+
+<script language="JavaScript" type="text/javascript" src="javaScript/timeStampPicker.js">
+</script>
+<script language="javascript">
+function validate()
+{
+ if(document.forms[0].t1.value=="")       /*for name*/
+   {
+     alert("The NAME cannot be left blank");
+     document.forms[0].t1.focus();
+      return false;
+    }
+if(document.forms[0].t1.value!="")       /*for name*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t1.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>96)&&(k<123))||((k>64)&&(k<91))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("Plz Fill the NAME with ONLY CHARACTERS");
+document.forms[0].t1.focus();
+return false;
+ }
+}
+
+if(document.forms[0].t2.value=="")       /*for Age*/
+   {
+     alert("The Age cannot be left blank");
+     document.forms[0].t2.focus();
+      return false;
+    }
+	
+if(document.forms[0].t2.value!="")       /*for Age*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t2.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>47)&&(k<58))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("please fill the Age with ONLY NUMERIC");
+document.forms[0].t2.focus();
+return false;
+ }
+}
+
+//For email-id
+if(document.forms[0].t3.value=="")       /*for Email id*/
+{
+alert("the Email id cannot be left blank");
+document.forms[0].t3.focus();
+return false;
+}
+
+/* For Email Id Vlidation*/
+
+var email=document.getElementById("t3").value;
+var emailpattern=/^[a-zA-Z0-9._-]+@[a-zA-Z]+\.[a-zA-Z]{2,4}$/;
+if(emailpattern.test(email))
+	{
+	}
+else
+	{
+	 alert("Email Id is not valid Plz fill with this pattern abc@gmail.com");
+	 return false;
+	
+	}
+
+if(document.forms[0].t5.value=="")       /*for Height*/
+{
+alert("Height cannot be left blank");
+document.forms[0].t5.focus();
+return false;
+}
+
+numeric=/^([0-9])+$/
+letters=/^([a-z A-Z])+$/
+exp=/[a-zA-Z0-9_.]+@[a-zA-Z]+([.][a-zA-Z])+/;
+if(document.forms[0].t6.value=="")       /*for Occupation*/
+{
+alert("Occupation cannot be left blank");
+document.forms[0].t6.focus();
+return false;
+}
+if(document.forms[0].t6.value.match(letters))
+{
+}
+else
+{
+alert("Plz fill the Occupation with Alphabets only");
+document.forms[0].t6.value="";
+document.forms[0].t6.focus();
+return false;
+}
+if(document.forms[0].t7.value=="")       /*for Address*/
+{
+alert("Address cannot be left blank");
+document.forms[0].t7.focus();
+return false;
+}
+
+if(f1.t9.value=="") //For Contact Number
+  {
+   alert("Phone number Can't be left blank");
+   f1.t9.focus();
+  return false;  
+  }
+else
+ if(((f1.t9.value).length)>10||((f1.t9.value).length)<10)
+  {
+  alert("please enter Phone number 10 charsonly");
+  f1.t9.value=""; 
+  f1.t9.focus();
+  return false;
+  }
+}
+</script>
+</HEAD>
+<BODY background="images/17.jpg">
+<form action="matri.jsp" method="post" name="f1"><br>
+  <H1 align=center><FONT color=yellow size=4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Wel come To <FONT color=yellow>Matrimonial </FONT>    </FONT>
+<TABLE border=0 cellPadding=1 cellSpacing=1 style="HEIGHT: 441px; WIDTH: 452px" 
+width="72%"><br>
+  
+  <TR>
+    <TD width="37%"><STRONG>Name</STRONG></TD>
+    <TD width="63%"><INPUT id=text2 name=t1></TD></TR>
+  <TR>
+    <TD><STRONG>Age</STRONG></TD>
+    <TD><INPUT id=text1 name=t2></TD></TR>
+  <TR>
+    <TD><STRONG>Mail ID</STRONG></TD>
+    <TD><INPUT id=text3 name=t3></TD></TR>
+  <TR>
+    <TD><STRONG>Gender</STRONG></TD>
+    <TD><SELECT id=select1 name=select1 
+      style="HEIGHT: 22px; WIDTH: 89px"> <OPTION selected 
+        value=Male>Male</OPTION><OPTION 
+value=Female>Female</OPTION></SELECT></TD></TR>
+  <TR>
+    <TD><STRONG>Realigion</STRONG></TD>
+    <TD><SELECT id=select2 name=select2 
+      style="HEIGHT: 22px; WIDTH: 89px"> <OPTION selected 
+        value=Hindu>Hindu</OPTION><OPTION value=Muslim>Muslim</OPTION><OPTION 
+        value=Christian>Christian</OPTION><OPTION 
+      value=Others>Others</OPTION></SELECT></TD></TR>
+  <TR>
+    <TD><STRONG>Marital Status</STRONG></TD>
+    <TD><SELECT id=select3 name=select3 
+      style="HEIGHT: 22px; WIDTH: 89px"> <OPTION selected 
+        value=Married>Married</OPTION><OPTION value="Un Married">Un 
+        Married</OPTION></SELECT></TD></TR>
+  <TR>
+    <TD><STRONG>Date of Birth</STRONG></TD>
+  
+	 <td><INPUT id=text7 name=t4 readOnly="true">
+	<a href="javascript:show_calendar('document.f1.t4', document.f1.t4.value);">
+<img src="images/cal.gif" alt="Click here to get Calender" width="18" height="18"	border="0" /></a></td></tr>
+</TR>
+  <TR>
+    <TD><STRONG>Height</STRONG></TD>
+    <TD><INPUT id=text9 name=t5>(5.7 
+      ex: 5f,7inch)</TD></TR>
+
+  <TR>
+    <TD><STRONG>Occupation</STRONG></TD>
+    <TD><INPUT id=text8 name=t6></TD></TR>
+<!--  <TR>
+    <TD><STRONG>Occupation</STRONG></TD>
+    <TD><INPUT id=text9 name="occu"></TD></TR>-->
+  <TR>
+    <TD><STRONG>Address</STRONG></TD>
+    <TD><TEXTAREA id=TEXTAREA1 name=t7 style="HEIGHT: 38px; WIDTH: 154px"></TEXTAREA></TD></TR>
+  <TR>
+    <TD><STRONG>Country</STRONG></TD>
+    <TD>
+	<select name=t8>
+	<option>India</option>
+		<option>Pakisthan</option>
+<option>China</option>
+<option>America</option>
+	</select>
+	
+</TD></TR>
+  <TR>
+    <TD><STRONG>Qualification</STRONG></TD>
+    <TD><SELECT id=select4 name=select4 
+      style="HEIGHT: 22px; WIDTH: 90px"> <OPTION selected 
+        value=MCA>MCA</OPTION><OPTION value=MTech>MTech</OPTION><OPTION 
+        value=MS>MS</OPTION><OPTION value=BTech>BTech</OPTION><OPTION 
+        value=Others>Others</OPTION><OPTION value=""></OPTION></SELECT></TD></TR>
+  <TR>
+    <TD><STRONG>Conact Number</STRONG></TD>
+    <TD><INPUT id=text13 name=t9></TD></TR>
+  <TR>
+    
+    <TD height="28" colspan="2" align="center">      
+      &nbsp;&nbsp; <INPUT id=submit1 name=submit1 style="BACKGROUND-COLOR: floralwhite" type=submit value="  Add  " onClick="return validate();">&nbsp;&nbsp;&nbsp;&nbsp; 
+<INPUT id=reset1 name=reset1  type=reset value=Reset></TD></TR></TABLE></H1>
+</form>
+
+</BODY>
+</HTML>

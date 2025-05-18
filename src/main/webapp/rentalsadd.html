@@ -1,0 +1,324 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<script language="javascript">
+function validate()
+{
+if(document.forms[0].t1.value=="")       /*for  House Number*/
+   {
+     alert("The  House Number cannot be left blank");
+     document.forms[0].t1.focus();
+      return false;
+    }
+	
+if(document.forms[0].t1.value!="")       /*for  House Number*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t1.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>47)&&(k<58))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("please fill the House Number with ONLY NUMERIC");
+document.forms[0].t1.focus();
+return false;
+ }
+}
+  if(document.forms[0].t2.value=="")       /*for Owners name*/
+   {
+     alert("The Owners NAME cannot be left blank");
+     document.forms[0].t2.focus();
+      return false;
+    }
+if(document.forms[0].t2.value!="")       /*for Owners  name*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t2.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>96)&&(k<123))||((k>64)&&(k<91))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("Plz Fill the Owners NAME with ONLY CHARACTERS");
+document.forms[0].t2.focus();
+return false;
+ }
+ 
+}
+if(document.forms[0].t3.value=="")       /*for Facilities of House*/
+   {
+     alert("The Facilities of House cannot be left blank");
+     document.forms[0].t3.focus();
+      return false;
+    }
+
+   if(document.forms[0].t4.value=="")       /*for Location */
+   {
+     alert("The Location cannot be left blank");
+     document.forms[0].t4.focus();
+      return false;
+    }
+	if(document.forms[0].t4.value!="")       /*for Location*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t4.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>96)&&(k<123))||((k>64)&&(k<91))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("Plz Fill the Location with ONLY CHARACTERS");
+document.forms[0].t4.focus();
+return false;
+ }
+ 
+}
+if(document.forms[0].t5.value=="")       /*for address*/
+   {
+     alert("The address cannot be left blank");
+     document.forms[0].t5.focus();
+      return false;
+    }
+	if(document.forms[0].t6.value=="")       /*for Rent*/
+   {
+     alert("The Rent cannot be left blank");
+     document.forms[0].t6.focus();
+      return false;
+    }
+	
+if(document.forms[0].t6.value!="")       /*for  Rent*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t6.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>47)&&(k<58))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("please fill the Rent with ONLY NUMERIC");
+document.forms[0].t6.focus();
+return false;
+ }
+}
+	if(document.forms[0].t7.value=="")       /*for Rent In Advance*/
+   {
+     alert("The  Rent In Advance cannot be left blank");
+     document.forms[0].t7.focus();
+      return false;
+    }
+	
+if(document.forms[0].t7.value!="")       /*for  Rent In Advance*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t7.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>47)&&(k<58))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("please fill the Rent In Advance  with ONLY NUMERIC");
+document.forms[0].t7.focus();
+return false;
+ }
+}
+
+
+
+if(document.forms[0].t8.value=="")       /*for City */
+   {
+     alert("The City cannot be left blank");
+     document.forms[0].t8.focus();
+      return false;
+    }
+if(document.forms[0].t8.value!="")       /*for City*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t8.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>96)&&(k<123))||((k>64)&&(k<91))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("Plz Fill the City with ONLY CHARACTERS");
+document.forms[0].t8.focus();
+return false;
+ }
+ 
+}
+if(rental.t9.value=="")
+  {
+   alert("Phone number Can't be left blank");
+   rental.t9.focus();
+  return false;  
+  }
+else
+ if(((rental.t9.value).length)>10||((rental.t9.value).length)<10)
+  {
+  alert("please enter Phone number 10 charsonly");
+  rental.t9.value=""; 
+  rental.t9.focus();
+  return false;
+  }
+}
+</script>
+</HEAD>
+
+<BODY background="images/17.jpg">
+<form name="rental" action="rentals.jsp" method="post">
+<P align=center><FONT 
+size=4><STRONG><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<FONT color="black" size=5>Welcome To Rentals Module</FONT></STRONG></FONT></P>
+<P align=center><br>
+<TABLE border=0 cellPadding=1 cellSpacing=1 width="75%">
+  
+  <TR>
+    <TD>
+      <P align=left>House No</P></TD>
+    <TD><INPUT type="text" id=text2 name="t1"></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Owners Name</P></TD>
+    <TD><INPUT type="text" id=text3 name="t2"></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Facilities of House</P></TD>
+    <TD><TEXTAREA id=TEXTAREA1 name="t3">
+</TEXTAREA></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Location</P></TD>
+    <TD><INPUT type="text" id=text5 name="t4"></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Address</P></TD>
+    <TD><INPUT type="text" id=text6 name="t5"></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Rent</P></TD>
+    <TD><INPUT type="text" id=text7 name="t6"></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Rent In Adavance</P></TD>
+    <TD><INPUT type="text" id=text8 name="t7"></TD></TR>
+  <TR>
+    <TD>City</TD>
+    <TD><INPUT type="text" id=text9 name="t8"></TD></TR>
+  <TR>
+    <TD>Contact Number</TD>
+    <TD><INPUT type="text" id=text4 name="t9"></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD>&nbsp;&nbsp;&nbsp;<INPUT id=submit1 name=submit1 type="submit" value="Add" onClick="return validate();">&nbsp;&nbsp;&nbsp; 
+<INPUT id=reset1 name=reset1 style="LEFT: 103px; TOP: 1px" type=reset value="Clear">&nbsp;</TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR></TABLE></P>
+</form>
+
+</BODY>
+</HTML>

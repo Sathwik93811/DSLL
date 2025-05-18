@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<script language="javascript">
+function validate()
+{
+if(document.forms[0].username.value=="")       /*for User name*/
+{
+alert("The User Name cannot be left blank");
+document.forms[0].username.focus();
+return false;
+}
+if(document.forms[0].username.value!="")       /*for username */
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].username.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>96)&&(k<123))||((k>64)&&(k<91))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("Plz Fill the username with ONLY CHARACTERS");
+document.forms[0].username.focus();
+return false;
+ }
+}
+if(reg.password.value=="")
+  {
+   alert("password Can't be left blank");
+   reg.password.focus();
+  return false;  
+  }
+else
+ if(((reg.password.value).length)>8||((reg.password.value).length)<8)
+  {
+  alert("please enter password exactly 8 charsonly");
+  reg.password.value=""; 
+  reg.password.focus();
+  return false;
+  }
+
+if(document.forms[0].addr.value=="")       /*for Address*/
+{
+alert("Address cannot be left blank");
+document.forms[0].addr.focus();
+return false;
+}
+if(reg.phno.value=="")
+  {
+   alert("Phone number Can't be left blank");
+   reg.phno.focus();
+  return false;  
+  }
+else
+ if(((reg.phno.value).length)>10||((reg.phno.value).length)<10)
+  {
+  alert("please enter Phone number exactly 10 charsonly");
+  reg.phno.value=""; 
+  reg.phno.focus();
+  return false;
+  }
+
+}
+</script>
+
+</HEAD>
+<BODY background="images/17.jpg">
+
+<form action="usereg.jsp" method="post" name="reg" >
+<P>&nbsp;</P>
+<P align=center>&nbsp; <STRONG>Welcome To USER REGISTRATION Page</STRONG></P>
+<P align=center>&nbsp;</P>
+<P align=center>
+<TABLE border=1 cellPadding=3 cellSpacing=2 style="HEIGHT: 98px; WIDTH: 319px" 
+width="75%">
+  
+  <TR>
+    <TD><STRONG>User Name&nbsp;&nbsp;&nbsp;&nbsp; </STRONG></TD>
+    <TD><INPUT id=text1 name=username></TD></TR>
+  <TR>
+    <TD><STRONG>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </STRONG></TD>
+    <TD><INPUT type="password" name=password style="LEFT: 216px; TOP: 173px"></TD></TR>
+
+  <TR>
+    <TD><STRONG>Address&nbsp;&nbsp;&nbsp;&nbsp; </STRONG></TD>
+    <TD><INPUT id=add name=addr></TD></TR>
+  <TR>
+    <TD><STRONG>Phone No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      </STRONG></TD>
+    <TD><INPUT type="text" name=phno style="LEFT: 216px; TOP: 173px"></TD></TR>
+
+  <TR>
+  	<TD></TD>
+    <TD><INPUT id=submit1 name=submit1 type=submit value="Sign Up" onClick="return validate();">&nbsp;&nbsp;&nbsp;<INPUT id=reset1 name=reset1 style="BACKGROUND-COLOR: lavenderblush; LEFT: 62px; TOP: 2px" type=reset value=Reset></TD></TR></TABLE></P>
+<P align=center>&nbsp;</P>
+<P align=center>&nbsp;</P>
+<P align=center>&nbsp;</P>
+
+</form>
+
+</BODY>
+</HTML>

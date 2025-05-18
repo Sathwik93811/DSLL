@@ -1,0 +1,243 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<script language="javascript">
+
+function validate()
+{
+	numeric=/^([0-9])+$/
+letters=/^([a-z A-Z])+$/
+exp=/[a-zA-Z0-9_.]+@[a-zA-Z]+([.][a-zA-Z])+/;
+if(document.forms[0].t1.value=="")       /*for Car Code*/
+   {
+     alert(" Car Code cannot be left blank");
+     document.forms[0].t1.focus();
+      return false;
+    }
+if(document.forms[0].t1.value!="")       /*for   Car Code*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t1.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>47)&&(k<58))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("please fill the  Car Code  with ONLY NUMERIC");
+document.forms[0].t1.focus();
+return false;
+ }
+}
+
+if(document.forms[0].t2.value=="")       /*for Car Model Type*/
+{
+alert("The Car Model Type cannot be left blank");
+document.forms[0].t2.focus();
+return false;
+}
+if(document.forms[0].t2.value.match(letters))
+{
+}
+else
+{
+alert("Car Model Type with only Alphabets");
+document.forms[0].t2.value="";
+document.forms[0].t2.focus();
+return false;
+}
+if(document.forms[0].t3.value=="")       /*for Cost Of Car*/
+   {
+     alert("Cost Of Car cannot be left blank");
+     document.forms[0].t3.focus();
+      return false;
+    }
+if(document.forms[0].t3.value!="")       /*for Cost Of Car*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t3.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>47)&&(k<58))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("please fill the  Cost Of Car  with ONLY NUMERIC");
+document.forms[0].t3.focus();
+return false;
+ }
+}
+
+
+if(document.forms[0].t4.value=="")       /*for Used Life Time So For*/
+   {
+     alert("Used Life Time  cannot be left blank");
+     document.forms[0].t4.focus();
+      return false;
+    }
+if(document.forms[0].t4.value!="")       /*for Used Life Time So For*/
+{
+var str;
+var str_len;
+var  k;
+var  m;
+
+str= document.forms[0].t4.value;
+str_len=str.length;
+
+for(var i=0;i<str_len;i++)
+{
+k=str.charCodeAt(i);
+if( ((k>47)&&(k<58))||(k==32)  )
+{
+  m=1;
+}
+else 
+{
+ m=2;
+break;
+}
+}
+if(m==2)
+{
+alert("please fill the Used Life Time with ONLY NUMERIC");
+document.forms[0].t4.focus();
+return false;
+ }
+}
+
+if(document.forms[0].t5.value=="")       /*for Contact Person name*/
+{
+alert("Contact Person name cannot be left blank");
+document.forms[0].t5.focus();
+return false;
+}
+if(document.forms[0].t5.value.match(letters))
+{
+}
+else
+{
+alert("Contact Person name with only Alphabets");
+document.forms[0].t5.value="";
+document.forms[0].t5.focus();
+return false;
+}
+
+if(wheels.t6.value=="")  //For Contact Person Number
+  {
+   alert("Contact Person number Can't be left blank");
+   wheels.t6.focus();
+  return false;  
+  }
+else
+ if(((wheels.t6.value).length)>10||((wheels.t6.value).length)<10)
+  {
+  alert("please enter Contact Person number 10 charsonly");
+  wheels.t6.value=""; 
+  wheels.t6.focus();
+  return false;
+  }
+
+if(document.forms[0].t7.value=="")       /*for Contact Address*/
+{
+alert("Contact Address cannot be left blank");
+document.forms[0].t7.focus();
+return false;
+}
+
+if(document.forms[0].t8.value=="")       /*for Description*/
+{
+alert("Description cannot be left blank");
+document.forms[0].t8.focus();
+return false;
+}
+return true;
+}
+</script>
+</HEAD>
+<BODY background="images/17.jpg">
+<form action="wheels.jsp" method="post" name="wheels">
+<P>&nbsp;</P>
+<P align=center><FONT 
+size=4><STRONG>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<FONT color=yellow size=4>Wel come To Wheels Used Cars</FONT></STRONG></FONT></P>
+<P align=center>
+<TABLE border=0 cellPadding=1 cellSpacing=1 width="75%">
+  
+  <TR>
+    <TD>
+      <P align=left>Car Code</P></TD>
+    <TD><INPUT id=text2 name=t1></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Car Model Type</P></TD>
+    <TD><INPUT id=text3 name=t2></TD></TR>
+  
+  <TR>
+    <TD>
+      <P align=left>Cost of Car</P></TD>
+    <TD><INPUT id=text1 name=t3></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Used Life Time So For</P></TD>
+    <TD><INPUT id=text6 name=t4></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Contact Person Name</P></TD>
+    <TD><INPUT id=text7 name=t5></TD></TR>
+  <TR>
+    <TD>
+      <P align=left>Contact Person Number</P></TD>
+    <TD><INPUT id=text8 name=t6></TD></TR>
+  <TR>
+    <TD>Contact Address</TD>
+    <TD><INPUT id=text9 name=t7></TD></TR>
+  <TR>
+    <TD> Discription</TD>
+    <TD><TEXTAREA id=TEXTAREA1 name=t8>
+</TEXTAREA></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR>
+  <TR>
+    <TD></TD>
+    <TD>&nbsp;&nbsp;&nbsp;<INPUT id=submit1 name=submit1 type=submit value="Add" onClick="return validate();">&nbsp;&nbsp;&nbsp; 
+<INPUT id=reset1 name=reset1 style="LEFT: 103px; TOP: 1px" type=reset value=" Clear ">&nbsp;</TD></TR>
+  <TR>
+    <TD></TD>
+    <TD></TD></TR></TABLE></P>
+</form>
+
+</BODY>
+</HTML>
